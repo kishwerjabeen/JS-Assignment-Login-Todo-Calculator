@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+<!--   <div class="tree">
+    <img src="https://png.icons8.com/windows/222/deciduous-tree.png">
+    <div class="name-app">
+      <h2>Tree
+        <span>Life.</span>
+      </h2>
+    </div>
+  </div> -->
+  <div class="contact" id="contact">
+    <div class="col-xs-12">
+    </div>
+    <form action="" method="" name="contactform" id="contactform">
+      <div class="col-xs-12">
+        <fieldset>
+          </i><input name="uname" type="text" id="name" size="30" placeholder="Username" required>
+          <input name="email" type="email" id="email" size="30" placeholder="Email" required>
+          <input name="pws" type="password" id="password" size="30" placeholder="Password" required>
+        </fieldset>
+      </div>
+      <div class="col-xs-12">
+        <fieldset>
+          <button type="submit" class="btn btn-lg" id="submit" size="30" value="submit" onclick="loginForm()">Go</button>
+        </fieldset>
+    </form>
+    </div>
+</div>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	
+function loginForm() {
+	var username=document.getElementById("name").value;
+	var email = document.getElementById("email").value;
+	var pass=document.getElementById("password").value;
+	if (username == "Admin" && pass == "123" && email = "admin@gmail.com" ) {
+
+		alert("Login Successfully");
+		window.location.origin ="front.html";
+	
+
+	}
+	else{
+		alert("incorrect Password or email");
+	}
+}
+
+</script>
+</html>
