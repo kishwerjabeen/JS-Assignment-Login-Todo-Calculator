@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup</title>
+	<link rel="stylesheet" href="css/style_signup.css">
+	
+</head>
+<body>
+<div class="container">
+
+  <div class="sign" id="sign">
+    <div class="col-xs-12">
+    </div>
+    <form action="" method="" name="signform" id="signform">
+      <div class="col-xs-12">
+        <fieldset>
+        
+          <input name="uname" type="text" id="userName" size="30" placeholder="Username" required>
+
+       
+          <input name="email" type="email" id="userEmail" size="30" placeholder="Email" required>
+          
+       
+          <input name="pws" type="password" id="password" size="30" placeholder="Password" required>
+           <input name="pws" type="password" id="confirm_password" size="30" placeholder="ReEnter Password" required>
+
+
+
+        </fieldset>
+      </div>
+      <div class="col-xs-12">
+        <fieldset>
+          <button type="submit" class="btn btn-lg" id="submit" size="30" value="submit" onclick="loginForm()" ><strong>SignUp</strong></button>
+        </fieldset>
+         <div class="col-xs-12">
+        <fieldset>
+        	<p id="error">Already Registered <a href="index.html">Login</a></p>
+        	
+        </fieldset>
+
+    </form>
+    </div>
+      </div>
+
+
+
+
+</div>
+</div>
+</div>
+<script type="text/javascript">
+		var password = document.getElementById("password")
+   var confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+	</script>
+<script src="signup.js"></script>
+</body>
+</html>
